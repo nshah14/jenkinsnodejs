@@ -2,10 +2,10 @@ node('testing') {
     stage('Initialize') {
         echo 'Initializing...'
 	sh 'echo $(whoami)'
-	sudo apt-get update
-	sudo apt-get install nodejs
+	sh 'sudo apt-get update'
+	sh 'sudo apt-get install nodejs'
     	sh 'node -v'
-	sudo apt-get install npm
+	sh 'sudo apt-get install npm'
 	sh 'npm -v'
         
     }
