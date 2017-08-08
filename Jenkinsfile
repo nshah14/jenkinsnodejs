@@ -1,4 +1,4 @@
-node('testing') {
+nodes{
     stage('Initialize') {
         echo 'Initializing...'
 	sh 'echo $(whoami)'
@@ -39,7 +39,7 @@ node('testing') {
     }
 }
 
-node('staging') {
+node{
     stage('Initialize'){
         echo 'Initializing...'
         // def node = tool name: 'Node-7.4.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
