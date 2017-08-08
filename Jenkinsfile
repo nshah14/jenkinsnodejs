@@ -1,7 +1,8 @@
 node('testing') {
     stage('Initialize') {
         echo 'Initializing...'
-        def node = tool name: 'Node-7.4.0', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+        def nodeHome = tool name: 'node-5.10.1', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+        sh "${nodeHome}/bin/node -v"
         env.PATH = "${node}/bin:${env.PATH}"
 	sh 'npm --version'
     }
