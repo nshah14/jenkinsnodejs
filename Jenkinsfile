@@ -1,4 +1,4 @@
-nodes{
+node{
     stage('Initialize') {
         echo 'Initializing...'
 	sh 'echo $(whoami)'
