@@ -3,9 +3,9 @@ node('testing') {
         echo 'Initializing...'
 	sh 'echo $(whoami)'
 	sh 'sudo apt-get update'
-	sh 'sudo apt-get install nodejs'
+	sh 'sudo apt-get install nodejs -y'
     	sh 'node -v'
-	sh 'sudo apt-get install npm'
+	sh 'sudo apt-get install npm -y'
 	sh 'npm -v'
         
     }
