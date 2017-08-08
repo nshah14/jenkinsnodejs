@@ -1,6 +1,8 @@
 node('testing') {
     stage('Initialize') {
         echo 'Initializing...'
+	sh 'echo $(whoami)'
+    	sh 'node -v'
         def nodeHome = tool name: 'node-5.10.1', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
         sh "${nodeHome}/bin/node -v"
         env.PATH = "${node}/bin:${env.PATH}"
