@@ -59,7 +59,7 @@ node('testing'){
 
     stage('PM2 Install') {
         echo 'Installing PM2 to run application as daemon...'
-        sh "npm install pm2 -g"
+        sh "sudo npm install pm2 -g"
     }
 
     stage('Build') {
