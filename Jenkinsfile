@@ -2,11 +2,12 @@ node('testing') {
     stage('Initialize') {
         echo 'Initializing...'
 	sh 'echo $(whoami)'
+	sudo apt-get update
+	sudo apt-get install nodejs
     	sh 'node -v'
-        def nodeHome = tool name: 'node-5.10.1', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
-        sh "${nodeHome}/bin/node -v"
-        env.PATH = "${node}/bin:${env.PATH}"
-	sh 'npm --version'
+	sudo apt-get install npm
+	sh 'npm -v'
+        
     }
 
     stage('Checkout') {
