@@ -4,6 +4,7 @@ node('testing'){
 	sh 'echo $(whoami)'
 	sh 'sudo apt-get update'
 	sh 'sudo apt-get install nodejs -y'
+    // unlink after first run else pipeline will fail
 	// sh 'sudo ln -s /usr/bin/nodejs /usr/bin/node'    
     sh '/usr/bin/node -v'
 	sh 'sudo apt-get install npm -y'
