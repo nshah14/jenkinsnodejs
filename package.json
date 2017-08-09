@@ -4,8 +4,8 @@
   "description": "Small express application to show TDD with Jenkins 2.0 pipelines",
   "main": "index.js",
   "scripts": {
-    "pm2-start": "pm2 start -f index.js --name 'jenkins-pipeline-express'",
-    "pm2-stop": "pm2 stop 'jenkins-pipeline-express'",
+    "pm2-start": "sudo pm2 start -f index.js --name 'jenkins-pipeline-express'",
+    "pm2-stop": "sudo pm2 stop 'jenkins-pipeline-express'",
     "test": "jest"
   },
   "jest": {
