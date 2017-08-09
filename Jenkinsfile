@@ -74,7 +74,6 @@ node('testing'){
         sudo npm run pm2-stop
         sudo npm run pm2-start
         '''
-        // sh 'npm start'
     }
 }
 
