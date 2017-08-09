@@ -1,6 +1,6 @@
 node('testing'){
     stage('Initialize') {
-        echo 'Initializing...'
+    echo 'Initializing...'
 	sh 'echo $(whoami)'
 	sh 'sudo apt-get update'
 	sh 'sudo apt-get install nodejs -y'
