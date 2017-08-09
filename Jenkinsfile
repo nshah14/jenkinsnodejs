@@ -42,9 +42,7 @@ node('testing'){
 node('testing'){
     stage('Initialize'){
         echo 'Initializing...'
-        
         sh "node -v"
-
         // set environment variables
         env.VARIABLE_1="10"
         env.VARIABLE_2="7"
