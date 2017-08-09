@@ -72,13 +72,14 @@ node('testing'){
         sh 'npm test'
     }
 
-    // stage('Run Application') {
-    //     echo 'Stopping old process to run new process...'
-    //     sh '''
-    //     sudo /usr/bin/npm run pm2-stop
-    //     sudo /usr/bin/npm run pm2-start
-    //     '''
-    // }
+    stage('Run Application') {
+        echo 'Stopping old process to run new process...'
+        // sh '''
+        // sudo /usr/bin/npm run pm2-stop
+        // sudo /usr/bin/npm run pm2-start
+        // '''
+        sh 'npm start'
+    }
 }
 
 
