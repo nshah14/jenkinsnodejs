@@ -4,7 +4,7 @@ node('testing'){
 	sh 'echo $(whoami)'
 	sh 'sudo apt-get update'
 	sh 'sudo apt-get install nodejs -y'
-	// sh 'sudo ln -s /usr/bin/nodejs /usr/bin/node'    
+	sh 'sudo ln -s /usr/bin/nodejs /usr/bin/node'    
     sh '/usr/bin/node -v'
 	sh 'sudo apt-get install npm -y'
 	sh 'npm -v'
