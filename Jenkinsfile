@@ -75,8 +75,8 @@ node('testing'){
     stage('Run Application') {
         echo 'Stopping old process to run new process...'
         sh '''
-        sudo npm run pm2-stop
-        sudo npm run pm2-start
+        sudo /usr/bin/npm run pm2-stop
+        sudo /usr/bin/npm run pm2-start
         '''
     }
 }
