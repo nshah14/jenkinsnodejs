@@ -1,4 +1,6 @@
-node('testing'){
+agent any{
+stages{
+//node('testing'){
     stage('Initialize') {
     echo 'Initializing...'
 	sh 'echo $(whoami)'
@@ -40,7 +42,7 @@ node('testing'){
     }
 }
 
-node('testing'){
+//node('testing'){
     stage('Initialize'){
         echo 'Initializing...'
         sh "node -v"
@@ -77,5 +79,6 @@ node('testing'){
         '''
     }
 }
+
 
 
