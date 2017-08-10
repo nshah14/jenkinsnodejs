@@ -40,7 +40,7 @@ stages{
 			reportName: "Application Test Coverage"
 		])
     }
-}
+//}
 
 //node('testing'){
     stage('Initialize'){
