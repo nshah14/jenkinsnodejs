@@ -1,6 +1,4 @@
-agent any{
-stages{
-//node('testing'){
+node('testing'){
     stage('Initialize') {
     echo 'Initializing...'
 	sh 'echo $(whoami)'
@@ -40,9 +38,9 @@ stages{
 			reportName: "Application Test Coverage"
 		])
     }
-//}
+}
 
-//node('testing'){
+node('testing'){
     stage('Initialize'){
         echo 'Initializing...'
         sh "node -v"
@@ -79,6 +77,6 @@ stages{
         '''
     }
 }
-}
+
 
 
