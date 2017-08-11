@@ -40,7 +40,7 @@ node('testing'){
     }
 }
 
-node('testing'){
+node('staging'){
     stage('Initialize'){
         echo 'Initializing...'
         sh "node -v"
