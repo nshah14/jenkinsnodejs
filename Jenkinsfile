@@ -41,14 +41,17 @@ node('testing'){
 }
 
 node('staging'){
-    stage('Initialize'){
+    stage('Initialize') {
         echo 'Initializing...'
-        sh "node -v"
-        // set environment variables
-        env.VARIABLE_1="10"
-        env.VARIABLE_2="7"
+	    sh 'echo $(whoami)'
+	    sh 'sudo apt-get update'
+	    sh 'sudo apt-get install nodejs -y'
+        // unlink after first run else pipeline will fail
+	    sh 'sudo ln -s /usr/bin/nodejs /usr/bin/node'    
+        sh '/usr/bin/node -v'
+	    sh 'sudo apt-get install npm -y'
+	    sh 'npm -v'
     }
-
     stage('Checkout') {
         echo 'Getting source code...'
         checkout scm
